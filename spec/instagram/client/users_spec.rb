@@ -173,7 +173,7 @@ describe Instagram::Client do
           let(:user_media_feed_response){ @client.user_media_feed }
           subject{ user_media_feed_response }
 
-          it{ should be_an_instance_of(Array) }
+          it { should be_an_instance_of(Hashie::Array) }
           it{ should be_a_kind_of(Instagram::Response) }
           it{ should respond_to(:pagination) }
           it{ should respond_to(:meta) }
